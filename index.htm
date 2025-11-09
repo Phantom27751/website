@@ -1,44 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Test sample</title>
-<link rel="icon" href="/favicon.ico">
-<style>
-body {
-    font-family:Verdana;
-    color: #333;
-    padding:100px;
-}
-.testClass{
-    background-color:orange;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM BIOS - Main Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(180deg, #000080 0%, #000060 100%);
+            color: #c0c0c0;
+            font-family: 'Courier New', monospace;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .bios-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 3px solid #808080;
+            background: #000080;
+            box-shadow: 0 0 0 2px #000000, 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .bios-header {
+            background: #c0c0c0;
+            color: #000080;
+            padding: 8px 16px;
+            font-weight: bold;
+            border-bottom: 2px solid #808080;
+            font-size: 14px;
+        }
+
+        .bios-content {
+            padding: 20px;
+        }
+
+        .system-info {
+            background: #000060;
+            border: 2px solid #808080;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            border-bottom: 1px solid #000080;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: #00ffff;
+        }
+
+        .menu-section {
+            margin: 20px 0;
+        }
+
+        .menu-title {
+            background: #808080;
+            color: #000000;
+            padding: 6px 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border: 1px solid #c0c0c0;
+        }
+
+        .menu-items {
+            background: #000060;
+            border: 2px solid #808080;
+            padding: 10px;
+        }
+
+        .menu-item {
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: all 0.1s;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-item:hover {
+            background: #c0c0c0;
+            color: #000080;
+        }
+
+        .menu-item::before {
+            content: '►';
+            margin-right: 10px;
+            opacity: 0;
+        }
+
+        .menu-item:hover::before {
+            opacity: 1;
+        }
+
+        .footer {
+            background: #808080;
+            color: #000000;
+            padding: 10px 16px;
+            margin-top: 20px;
+            border: 2px solid #c0c0c0;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .status-bar {
+            background: #000000;
+            color: #00ff00;
+            padding: 8px 16px;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #ffff00;
+            font-weight: bold;
+        }
+    </style>
 </head>
-
-
-
-
-
-<!--This is a default HTML sample.-->
-
-
-
-
-
 <body>
-<div class="testClass" onclick="clickMe()">
-You see a preview of the default HTML sample.
-<br>
-Click me to test the JavaScript functionality.
-</div>
-<script type="text/javascript">
-function clickMe()
-{
-var testClassDiv = document.getElementsByClassName("testClass")[0];
-var testText = testClassDiv.innerHTML;
-testClassDiv.innerHTML = testText.replace(/click me.+?functionality/i, "I was clicked, the JavaScript is working");
-}
-</script>
+    <div class="bios-container">
+        <div class="bios-header">
+            AWARD BIOS SETUP UTILITY - VERSION 4.51PG
+        </div>
+
+        <div class="bios-content">
+            <div class="status-bar">
+                System Time: <span id="time"></span> | Date: <span id="date"></span> | Status: <span class="highlight">ONLINE</span>
+            </div>
+
+            <div class="system-info">
+                <div class="info-row">
+                    <span class="info-label">CPU Type:</span>
+                    <span>Intel Pentium III 1.0 GHz</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Memory Size:</span>
+                    <span>512 MB SDRAM</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Display Type:</span>
+                    <span>VGA/SVGA Compatible</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Hard Disk:</span>
+                    <span>40GB ATA-100</span>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <div class="menu-title">MAIN MENU</div>
+                <div class="menu-items">
+                    <div class="menu-item" onclick="alert('Loading Standard CMOS Features...')">
+                        Standard CMOS Features
+                    </div>
+                    <div class="menu-item" onclick="alert('Loading Advanced BIOS Features...')">
+                        Advanced BIOS Features
+                    </div>
+                    <div class="menu-item" onclick="alert('Loading Integrated Peripherals...')">
+                        Integrated Peripherals
+                    </div>
+                    <div class="menu-item" onclick="alert('Loading Power Management Setup...')">
+                        Power Management Setup
+                    </div>
+                    <div class="menu-item" onclick="alert('Loading PnP/PCI Configurations...')">
+                        PnP/PCI Configurations
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <div class="menu-title">SYSTEM UTILITIES</div>
+                <div class="menu-items">
+                    <div class="menu-item" onclick="alert('Loading Health Monitor...')">
+                        PC Health Status
+                    </div>
+                    <div class="menu-item" onclick="alert('Loading Frequency/Voltage Control...')">
+                        Frequency/Voltage Control
+                    </div>
+                    <div class="menu-item" onclick="alert('Loading Hard Disk Utility...')">
+                        Hard Disk Utility
+                    </div>
+                    <div class="menu-item" onclick="alert('Settings saved!')">
+                        Save & Exit Setup
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            ESC: Exit | F1: Help | F5: Load Defaults | F10: Save & Exit | <span class="blink">_</span>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
+            const dateStr = now.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: '2-digit', 
+                day: '2-digit' 
+            });
+            document.getElementById('time').textContent = timeStr;
+            document.getElementById('date').textContent = dateStr;
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
 </body>
 </html>
