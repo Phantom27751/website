@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+
     <style>
         @font-face {
             font-family: 'Web437 Acer VGA';
@@ -11,20 +12,97 @@
             font-weight: normal;
             font-style: normal;
         }
-        
+
         body {
+            margin: 0;
+            padding: 0;
             font-family: 'Web437 Acer VGA', monospace;
+            background-color: #000000;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #1a0f26, #11081a);
+            color: #e5d4ff;
+            padding: 35px 40px;
+            text-align: center;
+            border-bottom: 2px solid #3f1f63;
+            box-shadow: 0 0 8px #3f1f63;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px 30px;
+            background-color: #0d0812;
+            border: 1px solid #2d1844;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(90, 0, 150, 0.25);
+        }
+
+        p {
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: #b084ff;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        a:hover {
+            color: #e8ccff;
+            text-shadow: 0 0 6px #caa0ff;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid #3f1f63;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #a48ac4;
+            font-size: 0.9rem;
+            background: linear-gradient(to top, #0b0610, #140a1d);
+            border-top: 1px solid #3f1f63;
+            box-shadow: 0 0 8px #3f1f63;
         }
     </style>
 </head>
+
 <body>
-    <h1>About Me</h1>
-    <p>TEXT</p>
-    <p>TEXT</p>
-    <p>Go back to the <a href="index.html">Homepage</a>.</p>
-    <hr>
+    <header>
+        <h1>About Me</h1>
+    </header>
+
+    <main>
+        <p>
+            Text.
+        </p>
+
+        <p>
+            Text.
+        </p>
+
+        <p>
+            You can return to the <a href="index.html">Homepage</a> at any time.
+        </p>
+
+        <hr>
+    </main>
+
     <footer>
-        <p>IDK</p>
+        <p>To be updated later.</p>
     </footer>
 </body>
 </html>
