@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
     <style>
         @font-face {
             font-family: 'IBM Plex Mono';
@@ -11,25 +12,72 @@
             font-weight: bold;
             font-style: normal;
         }
-        
+
         body {
+            margin: 0;
+            padding: 0;
             font-family: 'IBM Plex Mono', monospace;
+            background-color: #000000;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1a0f26;
+            color: #e5d4ff;
+            padding: 25px 40px;
+            text-align: center;
+            border-bottom: 2px solid #3f1f63;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        a {
+            color: #b084ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #d4b7ff;
+            text-decoration: underline;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: 0;
+            border-top: 1px solid #3f1f63;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #a48ac4;
+            font-size: 0.9rem;
+            background-color: #0d0812;
+            border-top: 1px solid #3f1f63;
         }
     </style>
 </head>
+
 <body>
-    <h1>Welcome to My website!</h1>
-    <p>Check out the <a href="about.html">About Me</a> page to learn more.</p>
-    <p>Check out the <a href="projects.html">Projects</a> to see the things I'm working on.</p>
-    <p>Check out my RP group <a href="stt-main.html">Showbiz Time Theater Inc.</a></p>
-    <hr>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <main>
+        <p>Check out the <a href="about.html">About Me</a> page to learn more.</p>
+        <p>Explore the <a href="projects.html">Projects</a> section to see the work in progress.</p>
+        <p>Visit my RP group <a href="stt-main.html">Showbiz Time Theater Inc.</a></p>
+
+        <hr>
+    </main>
+
     <footer>
-        <p>More will be added later this site is a heavy W.I.P.</p>
+        <p>This site is a work in progress. More content will be added soon.</p>
     </footer>
 </body>
 </html>
-
-
-
-
-
