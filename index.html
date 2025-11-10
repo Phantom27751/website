@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
     <style>
@@ -22,43 +22,65 @@
             line-height: 1.6;
         }
 
+        /* Header with soft gradient and subtle glow */
         header {
-            background-color: #1a0f26;
+            background: linear-gradient(to bottom, #1a0f26, #11081a);
             color: #e5d4ff;
-            padding: 25px 40px;
+            padding: 35px 40px;
             text-align: center;
             border-bottom: 2px solid #3f1f63;
+            box-shadow: 0 0 8px #3f1f63;
         }
 
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        /* Main content container */
         main {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
-            padding: 0 20px;
+            padding: 20px 30px;
+            background-color: #0d0812;
+            border: 1px solid #2d1844;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(90, 0, 150, 0.25);
         }
 
+        p {
+            font-size: 1.05rem;
+        }
+
+        /* Link styling with glow hover */
         a {
             color: #b084ff;
             text-decoration: none;
+            transition: 0.2s ease;
         }
 
         a:hover {
-            color: #d4b7ff;
-            text-decoration: underline;
+            color: #e8ccff;
+            text-shadow: 0 0 6px #caa0ff;
         }
 
+        /* Divider line */
         hr {
             margin: 40px 0;
             border: 0;
             border-top: 1px solid #3f1f63;
         }
 
+        /* Footer with subtle gradient and border glow */
         footer {
             text-align: center;
             padding: 25px;
             color: #a48ac4;
             font-size: 0.9rem;
-            background-color: #0d0812;
+            background: linear-gradient(to top, #0b0610, #140a1d);
             border-top: 1px solid #3f1f63;
+            box-shadow: 0 0 8px #3f1f63;
         }
     </style>
 </head>
@@ -70,9 +92,8 @@
 
     <main>
         <p>Check out the <a href="about.html">About Me</a> page to learn more.</p>
-        <p>Explore the <a href="projects.html">Projects</a> section to see my active and planned future projects.</p>
+        <p>Explore the <a href="projects.html">Projects</a> section to see the work in progress.</p>
         <p>Visit my RP group <a href="stt-main.html">Showbiz Time Theater Inc.</a></p>
-
         <hr>
     </main>
 
@@ -81,4 +102,3 @@
     </footer>
 </body>
 </html>
-
