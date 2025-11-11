@@ -16,17 +16,17 @@
             padding: 0;
             font-family: 'IBM Plex Mono', monospace;
             background-color: #000000;
-            color: #e0e0e0;
+            color: #e5e5e5;
             line-height: 1.6;
         }
-        /* Header with soft gradient and subtle glow */
+        /* Header with gradient */
         header {
-            background: linear-gradient(to bottom, #2a1015, #1a0a0d);
-            color: #ffd4d4;
+            background: linear-gradient(to bottom, #0a0a0a, #171717);
+            color: #ffffff;
             padding: 35px 40px;
             text-align: center;
-            border-bottom: 2px solid #6b1f2f;
-            box-shadow: 0 0 8px #6b1f2f;
+            border-bottom: 2px solid #cccccc;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
         }
         header h1 {
             margin: 0 0 10px 0;
@@ -36,7 +36,7 @@
         header p {
             margin: 0;
             font-size: 1rem;
-            color: #e8a8b8;
+            color: #b5b5b5;
             font-weight: normal;
         }
         /* Main content container */
@@ -44,17 +44,17 @@
             max-width: 900px;
             margin: 40px auto;
             padding: 20px 30px;
-            background-color: #120808;
-            border: 1px solid #442018;
+            background-color: #050505;
+            border: 1px solid #333333;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(150, 30, 30, 0.25);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
         }
         h2 {
-            color: #ffb3b3;
+            color: #ffffff;
             font-size: 1.5rem;
             margin-top: 0;
             margin-bottom: 20px;
-            border-bottom: 1px solid #6b1f2f;
+            border-bottom: 1px solid #cccccc;
             padding-bottom: 10px;
         }
         .nav-section {
@@ -64,15 +64,15 @@
             display: block;
             padding: 15px 20px;
             margin: 10px 0;
-            background-color: #1f0d0d;
-            border: 1px solid #6b1f2f;
+            background-color: #000000;
+            border: 1px solid #cccccc;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
         .nav-link:hover {
-            background-color: #301414;
-            border-color: #a03f3f;
-            box-shadow: 0 0 12px rgba(160, 63, 63, 0.4);
+            background-color: #0f0f0f;
+            border-color: #ffffff;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
             transform: translateX(5px);
         }
         .nav-link h3 {
@@ -82,36 +82,36 @@
         .nav-link p {
             margin: 0;
             font-size: 0.95rem;
-            color: #d4a0a0;
+            color: #aaaaaa;
         }
         p {
             font-size: 1.05rem;
         }
-        /* Link styling with glow hover */
+        /* Link styling */
         a {
-            color: #ff8484;
+            color: #ffffff;
             text-decoration: none;
             transition: 0.2s ease;
         }
         a:hover {
-            color: #ffcccc;
-            text-shadow: 0 0 6px #ffa0a0;
+            color: #bbbbbb;
+            text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
         }
         /* Divider line */
         hr {
             margin: 40px 0;
             border: 0;
-            border-top: 1px solid #6b1f2f;
+            border-top: 1px solid #cccccc;
         }
-        /* Footer with subtle gradient and border glow */
+        /* Footer */
         footer {
             text-align: center;
             padding: 25px;
-            color: #c48a8a;
+            color: #aaaaaa;
             font-size: 0.9rem;
-            background: linear-gradient(to top, #100606, #1d0a0a);
-            border-top: 1px solid #6b1f2f;
-            box-shadow: 0 0 8px #6b1f2f;
+            background: linear-gradient(to top, #171717, #0a0a0a);
+            border-top: 1px solid #cccccc;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
         }
         footer p {
             margin: 8px 0;
@@ -124,18 +124,18 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #1f0d0d;
-            border: 3px solid #ff8484;
+            background-color: #000000;
+            border: 3px solid #ffffff;
             padding: 40px;
             border-radius: 15px;
-            box-shadow: 0 0 30px rgba(255, 132, 132, 0.6);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
             z-index: 1000;
             text-align: center;
             max-width: 500px;
         }
         
         #konami-message h2 {
-            color: #ffb3b3;
+            color: #ffffff;
             font-size: 2rem;
             margin-top: 0;
             margin-bottom: 20px;
@@ -144,7 +144,7 @@
         }
         
         #konami-message p {
-            color: #ffd4d4;
+            color: #e5e5e5;
             font-size: 1.2rem;
             margin: 15px 0;
         }
@@ -152,8 +152,8 @@
         #konami-message button {
             margin: 10px 5px;
             padding: 12px 25px;
-            background-color: #ff8484;
-            color: #1a0a0d;
+            background-color: #ffffff;
+            color: #000000;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -164,18 +164,18 @@
         }
         
         #konami-message button:hover {
-            background-color: #ffcccc;
-            box-shadow: 0 0 15px rgba(255, 132, 132, 0.6);
+            background-color: #cccccc;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
             transform: scale(1.05);
         }
         
         #konami-message button.close-btn {
-            background-color: #6b1f2f;
-            color: #ffd4d4;
+            background-color: #999999;
+            color: #000000;
         }
         
         #konami-message button.close-btn:hover {
-            background-color: #a03f3f;
+            background-color: #777777;
         }
     </style>
 </head>
@@ -226,14 +226,14 @@
         
         <hr>
         
-        <p style="text-align: center; color: #bd8282;">More sections and features coming soon. Check back regularly for updates!</p>
+        <p style="text-align: center; color: #666666;">More sections and features coming soon. Check back regularly for updates!</p>
     </main>
     
     <!-- Konami Code Easter Egg Modal -->
     <div id="konami-message">
         <h2>🎮 KONAMI CODE ACTIVATED! 🎮</h2>
         <p>You've unlocked the secret gamer path!</p>
-        <p style="font-size: 1rem; color: #e8a8b8;">Congratulations on finding this easter egg!</p>
+        <p style="font-size: 1rem; color: #4a4a4a;">Congratulations on finding this easter egg!</p>
         <button onclick="window.location.href='you-are-such-a-snigma-boy.html'">Enter Secret Page</button>
         <button class="close-btn" onclick="document.getElementById('konami-message').style.display='none'">Close</button>
     </div>
