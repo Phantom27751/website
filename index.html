@@ -116,6 +116,67 @@
         footer p {
             margin: 8px 0;
         }
+        
+        /* Konami Code Modal */
+        #konami-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1f0d0d;
+            border: 3px solid #ff8484;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 132, 132, 0.6);
+            z-index: 1000;
+            text-align: center;
+            max-width: 500px;
+        }
+        
+        #konami-message h2 {
+            color: #ffb3b3;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border: none;
+            padding: 0;
+        }
+        
+        #konami-message p {
+            color: #ffd4d4;
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+        
+        #konami-message button {
+            margin: 10px 5px;
+            padding: 12px 25px;
+            background-color: #ff8484;
+            color: #1a0a0d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'IBM Plex Mono', monospace;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        #konami-message button:hover {
+            background-color: #ffcccc;
+            box-shadow: 0 0 15px rgba(255, 132, 132, 0.6);
+            transform: scale(1.05);
+        }
+        
+        #konami-message button.close-btn {
+            background-color: #6b1f2f;
+            color: #ffd4d4;
+        }
+        
+        #konami-message button.close-btn:hover {
+            background-color: #a03f3f;
+        }
     </style>
 </head>
 <body>
@@ -167,9 +228,34 @@
         
         <p style="text-align: center; color: #bd8282;">More sections and features coming soon. Check back regularly for updates!</p>
     </main>
+    
+    <!-- Konami Code Easter Egg Modal -->
+    <div id="konami-message">
+        <h2>🎮 KONAMI CODE ACTIVATED! 🎮</h2>
+        <p>You've unlocked the secret gamer path!</p>
+        <p style="font-size: 1rem; color: #e8a8b8;">Congratulations on finding this easter egg!</p>
+        <button onclick="window.location.href='you-are-such-a-snigma-boy.html'">Enter Secret Page</button>
+        <button class="close-btn" onclick="document.getElementById('konami-message').style.display='none'">Close</button>
+    </div>
+    
     <footer>
         <p>This site is a work in progress. More content will be added soon.</p>
         <p>Contact us at <a href="mailto:administrator@xcorrupted-entitysx.com">administrator@xcorrupted-entitysx.com</a> for questions or concerns.</p>
     </footer>
+    
+    <script>
+        // Konami Code Easter Egg
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        
+        document.addEventListener('keydown', function(e) {
+            konamiCode.push(e.key);
+            konamiCode = konamiCode.slice(-10);
+            
+            if (konamiCode.join('').toLowerCase() === konamiSequence.join('').toLowerCase()) {
+                document.getElementById('konami-message').style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
